@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Order 24*7</title>
+    <title>Order 24x7</title>
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -112,15 +112,15 @@
                </a><!-- btn navbar-btn btn-primary Finish -->
                
                <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
-                   
+
                    <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search"><!-- btn btn-primary navbar-btn Begin -->
-                       
+
                        <span class="sr-only">Toggle Search</span>
-                       
+
                        <i class="fa fa-search"></i>
-                       
+
                    </button><!-- btn btn-primary navbar-btn Finish -->
-                   
+
                </div><!-- navbar-collapse collapse right Finish -->
                
                <div class="collapse clearfix" id="search"><!-- collapse clearfix Begin -->
@@ -215,7 +215,270 @@
        </div><!-- col-md-12 Finish -->
        
    </div><!-- container Finish -->
+
+   <div id="advantages"><!-- #advantages Begin -->
+
+   <div class="container"><!-- container Begin -->
+
+       <div class="same-height-row"><!-- same-height-row Begin -->
+
+           <div class="col-sm-4"><!-- col-sm-4 Begin -->
+
+               <div class="box same-height"><!-- box same-height Begin -->
+
+                   <div class="icon"><!-- icon Begin -->
+
+                       <i class="fa fa-heart"></i>
+
+                   </div><!-- icon Finish -->
+
+                   <h3><a href="#">Best Offer</a></h3>
+
+                   <p>We know to provide the best possible service ever</p>
+
+               </div><!-- box same-height Finish -->
+
+           </div><!-- col-sm-4 Finish -->
+
+           <div class="col-sm-4"><!-- col-sm-4 Begin -->
+
+               <div class="box same-height"><!-- box same-height Begin -->
+
+                   <div class="icon"><!-- icon Begin -->
+
+                       <i class="fa fa-tag"></i>
+
+                   </div><!-- icon Finish -->
+
+                   <h3><a href="#">Best Prices</a></h3>
+
+                   <p>Compare us with another site, who have the best prices.</p>
+
+               </div><!-- box same-height Finish -->
+
+           </div><!-- col-sm-4 Finish -->
+
+           <div class="col-sm-4"><!-- col-sm-4 Begin -->
+
+               <div class="box same-height"><!-- box same-height Begin -->
+
+                   <div class="icon"><!-- icon Begin -->
+
+                       <i class="fa fa-thumbs-up"></i>
+
+                   </div><!-- icon Finish -->
+
+                   <h3><a href="#">100% Original</a></h3>
+
+                   <p>We just offer you the best and original products</p>
+
+               </div><!-- box same-height Finish -->
+
+           </div><!-- col-sm-4 Finish -->
+
+       </div><!-- same-height-row Finish -->
+
+   </div><!-- container Finish -->
+
+   </div><!-- #advantages Finish -->
+
+   <div id="hot"><!-- #hot Begin -->
+
+       <div class="box"><!-- #Box Begin -->
+
+           <div class="container"><!-- Container Begin -->
+
+               <div class="col-md-12"><!-- Col-md-12 Begin-->
+
+                   <h2>
+                       Our Latest Products
+                   </h2>
+
+               </div><!-- Col-md-12 Finish-->
+
+           </div><!--#Box Finish-->
+
+       </div><!--#Box Finish-->
+
+   </div><!--#hot Finish-->
+
+   <div id="content" class="container"><!--#Container Begin-->
+
+       <div class="row"><!--Row Begin-->
+
+           <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single Begin-->
+
+               <div class="product"><!--Product Begin-->
+
+                   <a href="details.php" >
+
+                       <img class = "img-responsive" src="admin_area/product_images/product-1.jpg" alt="Product 1">
+
+                   </a>
+
+                   <div class="text"><!--text Begin-->
+
+                       <h3>
+                           <a href="details.php">
+                               Mass Gainer
+                           </a>
+                       </h3>
+                       <p class="price">$30</p>
+
+                       <p class="button">
+
+                           <a href="details.php" class="btn btn-default">View Details</a>
+
+                           <a href="details.php" class="btn btn-primary">
+
+                               <i class="fa fa-shopping-cart">
+
+                                   Add to Cart
+
+                               </i>
+
+                           </a>
+
+                       </p>
+
+                   </div><!--text Finish-->
+
+               </div><!--Product Finish-->
+
+           </div><!--col-sm-4 col-sm-6 single Finish-->
+
+           <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single Begin-->
+
+               <div class="product"><!--Product Begin-->
+
+                   <a href="details.php" >
+
+                       <img class = "img-responsive" src="admin_area/product_images/product-2.jpg" alt="Product 2">
+
+                   </a>
+
+                   <div class="text"><!--text Begin-->
+
+                       <h3>
+                           <a href="details.php">
+                               Mass Gainer
+                           </a>
+                       </h3>
+                       <p class="price">$30</p>
+
+                       <p class="button">
+
+                           <a href="details.php" class="btn btn-default">View Details</a>
+
+                           <a href="details.php" class="btn btn-primary">
+
+                               <i class="fa fa-shopping-cart">
+
+                                   Add to Cart
+
+                               </i>
+
+                           </a>
+
+                       </p>
+
+                   </div><!--text Finish-->
+
+               </div><!--Product Finish-->
+
+           </div><!--col-sm-4 col-sm-6 single Finish-->
+
+           <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single Begin-->
+
+               <div class="product"><!--Product Begin-->
+
+                   <a href="details.php" >
+
+                       <img class = "img-responsive" src="admin_area/product_images/product-1.jpg" alt="Product 1">
+
+                   </a>
+
+                   <div class="text"><!--text Begin-->
+
+                       <h3>
+                           <a href="details.php">
+                               Mass Gainer
+                           </a>
+                       </h3>
+                       <p class="price">$30</p>
+
+                       <p class="button">
+
+                           <a href="details.php" class="btn btn-default">View Details</a>
+
+                           <a href="details.php" class="btn btn-primary">
+
+                               <i class="fa fa-shopping-cart">
+
+                                   Add to Cart
+
+                               </i>
+
+                           </a>
+
+                       </p>
+
+                   </div><!--text Finish-->
+
+               </div><!--Product Finish-->
+
+           </div><!--col-sm-4 col-sm-6 single Finish-->
+
+           <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single Begin-->
+
+               <div class="product"><!--Product Begin-->
+
+                   <a href="details.php" >
+
+                       <img class = "img-responsive" src="admin_area/product_images/product-2.jpg" alt="Product 2">
+
+                   </a>
+
+                   <div class="text"><!--text Begin-->
+
+                       <h3>
+                           <a href="details.php">
+                               Mass Gainer
+                           </a>
+                       </h3>
+                       <p class="price">$30</p>
+
+                       <p class="button">
+
+                           <a href="details.php" class="btn btn-default">View Details</a>
+
+                           <a href="details.php" class="btn btn-primary">
+
+                               <i class="fa fa-shopping-cart">
+
+                                   Add to Cart
+
+                               </i>
+
+                           </a>
+
+                       </p>
+
+                   </div><!--text Finish-->
+
+               </div><!--Product Finish-->
+
+           </div><!--col-sm-4 col-sm-6 single Finish-->
+
+       </div><!--Row Finish-->
+
+   </div><!--#Container Finish-->
    
+   <?php
+
+   include("includes/footer.php");
+
+   ?>
     
     <script src="js/jquery-331.min.js"></script>
     <script src="js/bootstrap-337.min.js"></script>
