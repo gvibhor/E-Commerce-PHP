@@ -182,7 +182,7 @@
             <div class="box"><!-- box Begin -->
                 <h1>Shop</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo deleniti accusamus, consequuntur illum quasi ut. Voluptate a, ipsam repellendus ut fugiat minima? Id facilis itaque autem, officiis veritatis perferendis, quaerat!
+                    Our is brand name in itself, for its rigorous hard work and continuous efforts in serving the customers. We supply high Quality generic medications plus our products are approved by United States FDA and World Health Organization. We meet all the export standards of medications.
                 </p>
             </div><!-- box Finish -->
 
