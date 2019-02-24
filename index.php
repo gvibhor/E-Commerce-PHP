@@ -1,3 +1,7 @@
+<?php
+include('includes/db.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,7 +94,7 @@
                            <a href="shop.php">Shop</a>
                        </li>
                        <li>
-                           <a href="checkout.php">My Account</a>
+                           <a href="customer/my_account.php">My Account</a>
                        </li>
                        <li>
                            <a href="cart.php">Shopping Cart</a>
@@ -169,30 +173,76 @@
                </ol><!-- carousel-indicators Finish -->
                
                <div class="carousel-inner"><!-- carousel-inner Begin -->
+
+                   <?php
+
+                   $get_slides = "select * from slider LIMIT 0,1";
+
+                   $run_slides = mysqli_query($con,$get_slides);
+
+                   while($row_slides=mysqli_fetch_array($run_slides)){
+
+                       $slide_name = $row_slides['slide_name'];
+                       $slide_image = $row_slides['slide_image'];
+
+                       echo "
+                       
+                       <div class='item active'>
+                       
+                       <img src='admin_area/slides_images/$slide_image'>
+                       
+                       </div>
+                       
+                       ";
+
+                   }
+
+                   $get_slides = "select * from slider LIMIT 1,3";
+
+                   $run_slides = mysqli_query($con,$get_slides);
+
+                   while($row_slides=mysqli_fetch_array($run_slides)){
+
+                       $slide_name = $row_slides['slide_name'];
+                       $slide_image = $row_slides['slide_image'];
+
+                       echo "
+                       
+                       <div class='item'>
+                       
+                       <img src='admin_area/slides_images/$slide_image'>
+                       
+                       </div>
+                       
+                       ";
+
+                   }
+
+                   ?>
                    
-                   <div class="item active">
-                       
-                       <img src="admin_area/slides_images/slide-1.jpg" alt="Slider Image 1">
-                       
-                   </div>
-                   
-                   <div class="item">
-                       
-                       <img src="admin_area/slides_images/slide-2.jpg" alt="Slider Image 2">
-                       
-                   </div>
-                   
-                   <div class="item">
-                       
-                       <img src="admin_area/slides_images/slide-3.jpg" alt="Slider Image 3">
-                       
-                   </div>
-                   
-                   <div class="item">
-                       
-                       <img src="admin_area/slides_images/slide-4.jpg" alt="Slider Image 4">
-                       
-                   </div>
+<!--                   <div class="item active">-->
+<!--                       -->
+<!--                       <img src="admin_area/slides_images/slide-1.jpg" alt="Slider Image 1">-->
+<!--                       -->
+<!--                   </div>-->
+<!--                   -->
+<!--                   <div class="item">-->
+<!--                       -->
+<!--                       <img src="admin_area/slides_images/slide-2.jpg" alt="Slider Image 2">-->
+<!--                       -->
+<!--                   </div>-->
+<!--                   -->
+<!--                   <div class="item">-->
+<!--                       -->
+<!--                       <img src="admin_area/slides_images/slide-3.jpg" alt="Slider Image 3">-->
+<!--                       -->
+<!--                   </div>-->
+<!--                   -->
+<!--                   <div class="item">-->
+<!--                       -->
+<!--                       <img src="admin_area/slides_images/slide-4.jpg" alt="Slider Image 4">-->
+<!--                       -->
+<!--                   </div>-->
                    
                </div><!-- carousel-inner Finish -->
                
