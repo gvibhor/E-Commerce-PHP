@@ -1,7 +1,6 @@
 <?php
+include ("db.php");
 
-include('includes/db.php');
-include ('functions/functions.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +8,7 @@ include ('functions/functions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Order 24x7</title>
+    <title>M-Dev Store</title>
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -32,16 +31,16 @@ include ('functions/functions.php');
             <ul class="menu"><!-- cmenu Begin -->
 
                 <li>
-                    <a href="customer_register.php">Register</a>
+                    <a href="../customer_register.php">Register</a>
                 </li>
                 <li>
-                    <a href="checkout.php">My Account</a>
+                    <a href="my_account.php">My Account</a>
                 </li>
                 <li>
-                    <a href="cart.php">Go To Cart</a>
+                    <a href="../cart.php">Go To Cart</a>
                 </li>
                 <li>
-                    <a href="checkout.php">Login</a>
+                    <a href="../checkout.php">Login</a>
                 </li>
 
             </ul><!-- menu Finish -->
@@ -58,7 +57,7 @@ include ('functions/functions.php');
 
         <div class="navbar-header"><!-- navbar-header Begin -->
 
-            <a href="index.php" class="navbar-brand home"><!-- navbar-brand home Begin -->
+            <a href="../index.php" class="navbar-brand home"><!-- navbar-brand home Begin -->
 
                 <img src="images/ecom-store-logo.png" alt="M-dev-Store Logo" class="hidden-xs">
                 <img src="images/ecom-store-logo-mobile.png" alt="M-dev-Store Logo Mobile" class="visible-xs">
@@ -89,20 +88,20 @@ include ('functions/functions.php');
 
                 <ul class="nav navbar-nav left"><!-- nav navbar-nav left Begin -->
 
-                    <li class="<?php if($active=='Home') echo"active"; ?>">
-                        <a href="index.php">Home</a>
+                    <li>
+                        <a href="../index.php">Home</a>
                     </li>
-                    <li class="<?php if($active=='Shop') echo"active"; ?>">
-                        <a href="shop.php">Shop</a>
+                    <li>
+                        <a href="../shop.php">Shop</a>
                     </li>
-                    <li class="<?php if($active=='Account') echo"active"; ?>">
-                        <a href="customer/my_account.php">My Account</a>
+                    <li class="active">
+                        <a href="my_account.php">My Account</a>
                     </li>
-                    <li class="<?php if($active=='Cart') echo"active"; ?>">
-                        <a href="cart.php">Shopping Cart</a>
+                    <li>
+                        <a href="../cart.php">Shopping Cart</a>
                     </li>
-                    <li class="<?php if($active=='Contact') echo"active"; ?>">
-                        <a href="contact.php">Contact Us</a>
+                    <li>
+                        <a href="../contact.php">Contact Us</a>
                     </li>
 
                 </ul><!-- nav navbar-nav left Finish -->
@@ -158,52 +157,3 @@ include ('functions/functions.php');
     </div><!-- container Finish -->
 
 </div><!-- navbar navbar-default Finish -->
-
-<!--<div class='col-md-4 col-sm-6 center-responsive'>-->
-<!---->
-<!--    <div class='product'>-->
-<!---->
-<!--        <a href='details.php?pro_id=$pro_id'>-->
-<!---->
-<!--            <img class ='img-responsive' src='admin_area/product_images/$pro_img1' alt=''>-->
-<!---->
-<!--        </a>-->
-<!---->
-<!--        <div class='text'>-->
-<!---->
-<!--            <h3>-->
-<!---->
-<!--                <a href='details.php?pro_id=$pro_id'> $pro_title</a>-->
-<!---->
-<!--            </h3>-->
-<!---->
-<!--            <p class='price'>-->
-<!---->
-<!--                $ $pro_price-->
-<!---->
-<!--            </p>-->
-<!---->
-<!--            <p class='button'>-->
-<!---->
-<!--                <a class='btn btn-default' href='details.php?pro_id=$pro_id'>-->
-<!---->
-<!--                    View Details-->
-<!---->
-<!--                </a>-->
-<!---->
-<!--                <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>-->
-<!---->
-<!--                    <i class='fa fa-shopping-cart'></i>Add To Cart-->
-<!---->
-<!--                </a>-->
-<!---->
-<!---->
-<!--            </p>-->
-<!---->
-<!---->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-<!---->
-<!---->
-<!--</div>-->

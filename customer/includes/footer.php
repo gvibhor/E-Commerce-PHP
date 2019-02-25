@@ -6,10 +6,10 @@
                 <h4>Pages</h4>
 
                 <ul><!-- ul Begin -->
-                    <li><a href="../cart.php">Shopping Cart</a></li>
-                    <li><a href="../contact.php">Contact Us</a></li>
-                    <li><a href="../shop.php">Shop</a></li>
-                    <li><a href="my_account.php">My Account</a></li>
+                    <li><a href="cart.php">Shopping Cart</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="shop.php">Shop</a></li>
+                    <li><a href="customer/my_account.php">My Account</a></li>
                 </ul><!-- ul Finish -->
 
                 <hr>
@@ -17,8 +17,8 @@
                 <h4>User Section</h4>
 
                 <ul><!-- ul Begin -->
-                    <li><a href="../checkout.php">Login</a></li>
-                    <li><a href="../customer_register.php">Register</a></li>
+                    <li><a href="checkout.php">Login</a></li>
+                    <li><a href="customer_register.php">Register</a></li>
                 </ul><!-- ul Finish -->
 
                 <hr class="hidden-md hidden-lg hidden-sm">
@@ -30,11 +30,38 @@
                 <h4>Top Products Categories</h4>
 
                 <ul><!-- ul Begin -->
-                    <li><a href="#">Mass Gainer</a></li>
-                    <li><a href="#">Protein</a></li>
-                    <li><a href="#">Abortion Pills</a></li>
-<!--                    <li><a href="#">Shoes</a></li>-->
-<!--                    <li><a href="#">T-Shirts</a></li>-->
+
+                    <?php
+
+                    $get_p_cats = "select * from product_categories";
+
+                    $run_p_cats = mysqli_query($con,$get_p_cats);
+
+                    while($row_p_cats = mysqli_fetch_array($run_p_cats))
+                    {
+
+                        $p_cat_id = $row_p_cats['p_cat_id'];
+
+                        $p_cat_title = $row_p_cats['p_cat_title'];
+
+                        echo "
+                        
+                        <li>
+                        
+                            <a href='shop.php?p_cat=$p_cat_id'>
+                            
+                            $p_cat_title
+                            
+                             </a>
+                        
+                        </li>
+                        
+                        ";
+
+                    }
+
+                    ?>
+
                 </ul><!-- ul Finish -->
 
                 <hr class="hidden-md hidden-lg">
@@ -48,15 +75,15 @@
                 <p><!-- p Start -->
 
                     <strong>Order 24*7</strong>
-<!--                    <br/>Cibubur-->
-<!--                    <br/>Ciracas-->
-<!--                    <br/>0818-0683-3157-->
-<!--                    <br/>mugianto4th@gmail.com-->
-<!--                    <br/><strong>MrGhie</strong>-->
+                    <!--                    <br/>Cibubur-->
+                    <!--                    <br/>Ciracas-->
+                    <!--                    <br/>0818-0683-3157-->
+                    <!--                    <br/>mugianto4th@gmail.com-->
+                    <!--                    <br/><strong>MrGhie</strong>-->
 
                 </p><!-- p Finish -->
 
-                <a href="../contact.php">Check Our Contact Page</a>
+                <a href="contact.php">Check Our Contact Page</a>
 
                 <hr class="hidden-md hidden-lg">
 
