@@ -5,131 +5,129 @@ include("includes/header.php");
 
 ?>
 
-<div id="content"><!-- #content Begin -->
-    <div class="container"><!-- container Begin -->
-        <div class="col-md-12"><!-- col-md-12 Begin -->
+    <div id="content"><!-- #content Begin -->
+        <div class="container"><!-- container Begin -->
+            <div class="col-md-12"><!-- col-md-12 Begin -->
 
-            <ul class="breadcrumb"><!-- breadcrumb Begin -->
-                <li>
-                    <a href="index.php">Home</a>
-                </li>
-                <li>
-                    Register
-                </li>
-            </ul><!-- breadcrumb Finish -->
+                <ul class="breadcrumb"><!-- breadcrumb Begin -->
+                    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                        Register
+                    </li>
+                </ul><!-- breadcrumb Finish -->
 
-        </div><!-- col-md-12 Finish -->
+            </div><!-- col-md-12 Finish -->
 
-        <div class="col-md-3"><!-- col-md-3 Begin -->
+            <div class="col-md-3"><!-- col-md-3 Begin -->
 
-            <?php
+                <?php
 
-            include("includes/sidebar.php");
+                include("includes/sidebar.php");
 
-            ?>
+                ?>
 
-        </div><!-- col-md-3 Finish -->
+            </div><!-- col-md-3 Finish -->
 
-        <div class="col-md-9"><!-- col-md-9 Begin -->
+            <div class="col-md-9"><!-- col-md-9 Begin -->
 
-            <div class="box"><!-- box Begin -->
+                <div class="box"><!-- box Begin -->
 
-                <div class="box-header"><!-- box-header Begin -->
+                    <div class="box-header"><!-- box-header Begin -->
 
-                    <center><!-- center Begin -->
+                        <center><!-- center Begin -->
 
-                        <h2> Register a New Account</h2>
+                            <h2> Register a new account </h2>
 
-                    </center><!-- center Finish -->
+                        </center><!-- center Finish -->
 
-                    <form action="customer_register.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
+                        <form action="customer_register.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
 
-                        <div class="form-group"><!-- form-group Begin -->
+                            <div class="form-group"><!-- form-group Begin -->
 
-                            <label>Your Name</label>
+                                <label>Your Name</label>
 
-                            <input type="text" class="form-control" name="c_name" required>
+                                <input type="text" class="form-control" name="c_name" required>
 
-                        </div><!-- form-group Finish -->
+                            </div><!-- form-group Finish -->
 
-                        <div class="form-group"><!-- form-group Begin -->
+                            <div class="form-group"><!-- form-group Begin -->
 
-                            <label>Your Email</label>
+                                <label>Your Email</label>
 
-                            <input type="text" class="form-control" name="c_email" required>
+                                <input type="text" class="form-control" name="c_email" required>
 
-                        </div><!-- form-group Finish -->
+                            </div><!-- form-group Finish -->
 
-                        <div class="form-group"><!-- form-group Begin -->
+                            <div class="form-group"><!-- form-group Begin -->
 
-                            <label>Your Password</label>
+                                <label>Your Password</label>
 
-                            <input type="password" class="form-control" name="c_pass" required>
+                                <input type="password" class="form-control" name="c_pass" required>
 
-                        </div><!-- form-group Finish -->
+                            </div><!-- form-group Finish -->
 
+                            <div class="form-group"><!-- form-group Begin -->
 
-                        <div class="form-group"><!-- form-group Begin -->
+                                <label>Your Country</label>
 
-                            <label>Your Country</label>
+                                <input type="text" class="form-control" name="c_country" required>
 
-                            <input type="text" class="form-control" name="c_country" required>
+                            </div><!-- form-group Finish -->
 
-                        </div><!-- form-group Finish -->
+                            <div class="form-group"><!-- form-group Begin -->
 
+                                <label>Your City</label>
 
-                        <div class="form-group"><!-- form-group Begin -->
+                                <input type="text" class="form-control" name="c_city" required>
 
-                            <label>Your City</label>
+                            </div><!-- form-group Finish -->
 
-                            <input type="text" class="form-control" name="c_city" required>
+                            <div class="form-group"><!-- form-group Begin -->
 
-                        </div><!-- form-group Finish -->
+                                <label>Your Contact</label>
 
+                                <input type="text" class="form-control" name="c_contact" required>
 
-                        <div class="form-group"><!-- form-group Begin -->
+                            </div><!-- form-group Finish -->
 
-                            <label>Your Contact</label>
+                            <div class="form-group"><!-- form-group Begin -->
 
-                            <input type="text" class="form-control" name="c_contact" required>
+                                <label>Your Address</label>
 
-                        </div><!-- form-group Finish -->
+                                <input type="text" class="form-control" name="c_address" required>
 
-                        <div class="form-group"><!-- form-group Begin -->
+                            </div><!-- form-group Finish -->
 
-                            <label>Your Address</label>
+                            <div class="form-group"><!-- form-group Begin -->
 
-                            <input type="text" class="form-control" name="c_address" required>
+                                <label>Your Profile Picture</label>
 
-                        </div><!-- form-group Finish -->
+                                <input type="file" class="form-control form-height-custom" name="c_image" required>
 
-                        <div class="form-group"><!-- form-group Begin -->
+                            </div><!-- form-group Finish -->
 
-                            <label>Your Profile Picture</label>
+                            <div class="text-center"><!-- text-center Begin -->
 
-                            <input type="file" class="form-control form-height-custom" name="c_image" required>
+                                <button type="submit" name="register" class="btn btn-primary">
 
-                        </div><!-- form-group Finish -->
+                                    <i class="fa fa-user-md"></i> Register
 
-                        <div class="text-center"><!-- text-center Begin -->
+                                </button>
 
-                            <button type="submit" name="register" class="btn btn-primary">
+                            </div><!-- text-center Finish -->
 
-                                <i class="fa fa-user-md"></i>Register
-                            </button>
+                        </form><!-- form Finish -->
 
-                        </div><!-- text-center Finish -->
+                    </div><!-- box-header Finish -->
 
-                    </form><!-- form Finish -->
+                </div><!-- box Finish -->
 
-                </div><!-- box-header Finish -->
+            </div><!-- col-md-9 Finish -->
 
-            </div><!-- box Finish -->
-
-        </div><!-- col-md-9 Finish -->
-
-    </div><!-- container Finish -->
-</div><!-- #content Finish -->
+        </div><!-- container Finish -->
+    </div><!-- #content Finish -->
 
 <?php
 
@@ -137,9 +135,72 @@ include("includes/footer.php");
 
 ?>
 
-<script src="js/jquery-331.min.js"></script>
-<script src="js/bootstrap-337.min.js"></script>
+    <script src="js/jquery-331.min.js"></script>
+    <script src="js/bootstrap-337.min.js"></script>
 
 
-</body>
-</html>
+    </body>
+    </html>
+
+
+<?php
+
+if(isset($_POST['register'])){
+
+    $c_name = $_POST['c_name'];
+
+    $c_email = $_POST['c_email'];
+
+    $c_pass = $_POST['c_pass'];
+
+    $c_country = $_POST['c_country'];
+
+    $c_city = $_POST['c_city'];
+
+    $c_contact = $_POST['c_contact'];
+
+    $c_address = $_POST['c_address'];
+
+    $c_image = $_FILES['c_image']['name'];
+
+    $c_image_tmp = $_FILES['c_image']['tmp_name'];
+
+    $c_ip = getRealIpUser();
+
+    move_uploaded_file($c_image_tmp,"customer/customer_images/$c_image");
+
+    $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image,customer_ip) values ('$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image','$c_ip')";
+
+    $run_customer = mysqli_query($con,$insert_customer);
+
+    $sel_cart = "select * from cart where ip_add='$c_ip'";
+
+    $run_cart = mysqli_query($con,$sel_cart);
+
+    $check_cart = mysqli_num_rows($run_cart);
+
+    if($check_cart>0){
+
+        /// If register have items in cart ///
+
+        $_SESSION['customer_email']=$c_email;
+
+        echo "<script>alert('You have been Registered Sucessfully')</script>";
+
+        echo "<script>window.open('checkout.php','_self')</script>";
+
+    }else{
+
+        /// If register without items in cart ///
+
+        $_SESSION['customer_email']=$c_email;
+
+        echo "<script>alert('You have been Registered Sucessfully')</script>";
+
+        echo "<script>window.open('index.php','_self')</script>";
+
+    }
+
+}
+
+?>
