@@ -1,73 +1,141 @@
-<h1 align="center"> Edit Your Account</h1>
+<?php
 
-<form action="" method="post" enctype="multipart/form-data"><!--Form Begin-->
+$customer_session = $_SESSION['customer_email'];
 
-    <div class="form-group"><!--Form Group Begin-->
+$get_customer = "select * from customers where customer_email='$customer_session'";
 
-        <label> Costumer Name:</label>
+$run_customer = mysqli_query($con,$get_customer);
 
-        <input type="text" name="c_name" class="form-control" required>
+$row_customer = mysqli_fetch_array($run_customer);
 
-    </div><!--Form Group Finish-->
+$customer_id = $row_customer['customer_id'];
 
-    <div class="form-group"><!--Form Group Begin-->
+$customer_name = $row_customer['customer_name'];
 
-        <label> Costumer Email:</label>
+$customer_email = $row_customer['customer_email'];
 
-        <input type="text" name="c_email" class="form-control" required>
+$customer_country = $row_customer['customer_country'];
 
-    </div><!--Form Group Finish-->
+$customer_city = $row_customer['customer_city'];
 
-    <div class="form-group"><!--Form Group Begin-->
+$customer_contact = $row_customer['customer_contact'];
 
-        <label> Costumer Country:</label>
+$customer_address = $row_customer['customer_address'];
 
-        <input type="text" name="c_country" class="form-control" required>
+$customer_image = $row_customer['customer_image'];
 
-    </div><!--Form Group Finish-->
+?>
 
-    <div class="form-group"><!--Form Group Begin-->
+    <h1 align="center"> Edit Your Account </h1>
 
-        <label> Costumer City:</label>
+    <form action="" method="post" enctype="multipart/form-data"><!-- form Begin -->
 
-        <input type="text" name="c_city" class="form-control" required>
+        <div class="form-group"><!-- form-group Begin -->
 
-    </div><!--Form Group Finish-->
+            <label> Costumer Name: </label>
 
-    <div class="form-group"><!--Form Group Begin-->
+            <input type="text" name="c_name" class="form-control" value="<?php echo $customer_name; ?>" required>
 
-        <label> Costumer Contact:</label>
+        </div><!-- form-group Finish -->
 
-        <input type="text" name="c_contact" class="form-control" required>
+        <div class="form-group"><!-- form-group Begin -->
 
-    </div><!--Form Group Finish-->
+            <label> Costumer Email: </label>
 
-    <div class="form-group"><!--Form Group Begin-->
+            <input type="text" name="c_email" class="form-control" value="<?php echo $customer_email; ?>" required>
 
-        <label> Costumer Address:</label>
+        </div><!-- form-group Finish -->
 
-        <input type="text" name="c_address" class="form-control" required>
+        <div class="form-group"><!-- form-group Begin -->
 
-    </div><!--Form Group Finish-->
+            <label> Costumer Country: </label>
 
-    <div class="form-group form-height-custom"><!--Form Group Begin-->
+            <input type="text" name="c_country" class="form-control" value="<?php echo $customer_country; ?>" required>
 
-        <label> Costumer Image:</label>
+        </div><!-- form-group Finish -->
 
-        <input type="file" name="c_image" class="form-control" required>
+        <div class="form-group"><!-- form-group Begin -->
 
-        <img class="img-responsive" src="customer_images/erika.jpg" alt="Costumer Image">
+            <label> Costumer City: </label>
 
-    </div><!--Form Group Finish-->
+            <input type="text" name="c_city" class="form-control" value="<?php echo $customer_city; ?>" required>
 
-    <div class="text-center"><!--text-center Begin-->
+        </div><!-- form-group Finish -->
 
-        <button name="update" class="btn btn-primary"><!--btn btn-primary Begin-->
+        <div class="form-group"><!-- form-group Begin -->
 
-            <i class="fa fa-user-md"></i>Update Now
+            <label> Costumer Contact: </label>
 
-        </button><!--btn btn-primary Finish-->
+            <input type="text" name="c_contact" class="form-control" value="<?php echo $customer_contact; ?>" required>
 
-    </div><!--text-center Finish-->
+        </div><!-- form-group Finish -->
 
-</form><!--Form Finish-->
+        <div class="form-group"><!-- form-group Begin -->
+
+            <label> Costumer Address: </label>
+
+            <input type="text" name="c_address" class="form-control" value="<?php echo $customer_address; ?>" required>
+
+        </div><!-- form-group Finish -->
+
+        <div class="form-group"><!-- form-group Begin -->
+
+            <label> Costumer Image: </label>
+
+            <input type="file" name="c_image" class="form-control form-height-custom">
+
+            <img class="img-responsive" src="customer_images/<?php echo $customer_image; ?>" alt="Costumer Image">
+
+        </div><!-- form-group Finish -->
+
+        <div class="text-center"><!-- text-center Begin -->
+
+            <button name="update" class="btn btn-primary"><!-- btn btn-primary Begin -->
+
+                <i class="fa fa-user-md"></i> Update Now
+
+            </button><!-- btn btn-primary inish -->
+
+        </div><!-- text-center Finish -->
+
+    </form><!-- form Finish -->
+
+<?php
+
+if(isset($_POST['update'])){
+
+    $update_id = $customer_id;
+
+    $c_name = $_POST['c_name'];
+
+    $c_email = $_POST['c_email'];
+
+    $c_country = $_POST['c_country'];
+
+    $c_city = $_POST['c_city'];
+
+    $c_address = $_POST['c_address'];
+
+    $c_contact = $_POST['c_contact'];
+
+    $c_image = $_FILES['c_image']['name'];
+
+    $c_image_tmp = $_FILES['c_image']['tmp_name'];
+
+    move_uploaded_file ($c_image_tmp,"customer_images/$c_image");
+
+    $update_customer = "update customers set customer_name='$c_name',customer_email='$c_email',customer_country='$c_country',customer_city='$c_city',customer_address='$c_address',customer_contact='$c_contact',customer_image='$c_image' where customer_id='$update_id' ";
+
+    $run_customer = mysqli_query($con,$update_customer);
+
+    if($run_customer){
+
+        echo "<script>alert('Your account has been edited, to complete the process, please Relogin')</script>";
+
+        echo "<script>window.open('logout.php','_self')</script>";
+
+    }
+
+}
+
+?>
