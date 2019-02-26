@@ -1,7 +1,46 @@
 <?php
 
-include('includes/db.php');
-include ('functions/functions.php');
+include("includes/db.php");
+include("functions/functions.php");
+
+?>
+
+<?php
+
+if(isset($_GET['pro_id'])){
+
+    $product_id = $_GET['pro_id'];
+
+    $get_product = "select * from products where product_id='$product_id'";
+
+    $run_product = mysqli_query($con,$get_product);
+
+    $row_product = mysqli_fetch_array($run_product);
+
+    $p_cat_id = $row_product['p_cat_id'];
+
+    $pro_title = $row_product['product_title'];
+
+    $pro_price = $row_product['product_price'];
+
+    $pro_desc = $row_product['product_desc'];
+
+    $pro_img1 = $row_product['product_img1'];
+
+    $pro_img2 = $row_product['product_img2'];
+
+    $pro_img3 = $row_product['product_img3'];
+
+    $get_p_cat = "select * from product_categories where p_cat_id='$p_cat_id'";
+
+    $run_p_cat = mysqli_query($con,$get_p_cat);
+
+    $row_p_cat = mysqli_fetch_array($run_p_cat);
+
+    $p_cat_title = $row_p_cat['p_cat_title'];
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +48,7 @@ include ('functions/functions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Order 24x7</title>
+    <title>M-Dev Store</title>
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -158,52 +197,3 @@ include ('functions/functions.php');
     </div><!-- container Finish -->
 
 </div><!-- navbar navbar-default Finish -->
-
-<!--<div class='col-md-4 col-sm-6 center-responsive'>-->
-<!---->
-<!--    <div class='product'>-->
-<!---->
-<!--        <a href='details.php?pro_id=$pro_id'>-->
-<!---->
-<!--            <img class ='img-responsive' src='admin_area/product_images/$pro_img1' alt=''>-->
-<!---->
-<!--        </a>-->
-<!---->
-<!--        <div class='text'>-->
-<!---->
-<!--            <h3>-->
-<!---->
-<!--                <a href='details.php?pro_id=$pro_id'> $pro_title</a>-->
-<!---->
-<!--            </h3>-->
-<!---->
-<!--            <p class='price'>-->
-<!---->
-<!--                $ $pro_price-->
-<!---->
-<!--            </p>-->
-<!---->
-<!--            <p class='button'>-->
-<!---->
-<!--                <a class='btn btn-default' href='details.php?pro_id=$pro_id'>-->
-<!---->
-<!--                    View Details-->
-<!---->
-<!--                </a>-->
-<!---->
-<!--                <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>-->
-<!---->
-<!--                    <i class='fa fa-shopping-cart'></i>Add To Cart-->
-<!---->
-<!--                </a>-->
-<!---->
-<!---->
-<!--            </p>-->
-<!---->
-<!---->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-<!---->
-<!---->
-<!--</div>-->

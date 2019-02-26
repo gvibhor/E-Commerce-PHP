@@ -1,7 +1,6 @@
 <?php
 
-$active = 'Shop';
-
+$active='Shop';
 include("includes/header.php");
 
 ?>
@@ -35,25 +34,23 @@ include("includes/header.php");
 
             <?php
 
-            if (!isset($_GET['p_cat'])){
+            if(!isset($_GET['p_cat'])){
 
-            if (!isset($_GET['cat'])) {
+                if(!isset($_GET['cat'])){
 
-                echo "
+                    echo "
 
-            <div class='box'><!-- box Begin -->
+                       <div class='box'><!-- box Begin -->
+                           <h1>Shop</h1>
+                           <p>
+                               Our is brand name in itself, for its rigorous hard work and continuous efforts in serving the customers. We supply high Quality generic medications plus our products are approved by United States FDA and World Health Organization. We meet all the export standards of medications.
+                           </p>
+                       </div><!-- box Finish -->
 
-                <h1>Shop</h1>
+                       ";
 
-                <p>
-                    Our is brand name in itself, for its rigorous hard work and continuous efforts in serving the customers. We supply high Quality generic medications plus our products are approved by United States FDA and World Health Organization. We meet all the export standards of medications.
-                </p>
+                }
 
-            </div><!-- box Finish -->
-
-            ";
-
-            }
             }
 
             ?>
@@ -202,19 +199,16 @@ include("includes/header.php");
 
                     ?>
 
-
-                </ul><!-- row Finish -->
-
+                </ul><!-- pagination Finish -->
             </center>
-            <div class="row"><!-- row Begin -->
 
-                <?php
+            <?php
 
-                getpcatpro()
+            getpcatpro();
 
-                ?>
+            getcatpro();
 
-            </div><!-- row Finish -->
+            ?>
 
         </div><!-- col-md-9 Finish -->
 
